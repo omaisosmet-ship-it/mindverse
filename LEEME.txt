@@ -1,0 +1,30 @@
+MINDVERSE – publicar con dominio propio
+========================================
+Este paquete es un sitio estático (sin servidor ni base de datos). Contenido:
+  index.html (la página completa) · 404.html · favicon/iconos · og-image.png (vista previa al compartir)
+  manifest.webmanifest · robots.txt · sitemap.xml · _headers · _redirects · vercel.json
+
+QUÉ NECESITAS
+  1. Un dominio (ej. mindverse.com). Se compra en un registrador (Namecheap, Porkbun, Cloudflare Registrar, GoDaddy…) por ~10-15 USD/año.
+     Antes de comprar, comprueba que esté libre; si mindverse.com está ocupado, prueba mindverse.app, mindverse.io, mindverse.school, getmindverse.com, etc.
+  2. Un alojamiento estático gratuito: Cloudflare Pages, Netlify o Vercel (o GitHub Pages).
+
+PASOS
+  1. Sube esta carpeta al alojamiento (Netlify: arrastrar la carpeta en app.netlify.com/drop; Cloudflare Pages: "Upload assets"; Vercel: importar la carpeta).
+  2. En el panel del alojamiento: Domains / Custom domain -> añade tu dominio (y www.tudominio).
+  3. En tu registrador (o en el DNS del alojamiento) crea los registros que el panel te indique. Normalmente:
+       - dominio raíz (tudominio.com):  registro A (o ALIAS/ANAME) hacia la IP/host indicado
+       - www:                           registro CNAME hacia el host indicado (ej. tuproyecto.netlify.app)
+     La propagación tarda de minutos a 24 h.
+  4. El HTTPS (candado) se activa solo y es gratuito. Activa "Force HTTPS".
+  5. Elige tudominio.com como dominio principal y redirige www -> raíz (o al revés) desde el panel.
+     Comparte siempre tu dominio; la dirección interna de la plataforma queda sin uso.
+
+DOMINIO EN EL CÓDIGO
+  Esta copia fue generada para: mindverse.com (canonical, sitemap y vista previa). Si tu dominio es otro, regenera con:
+       node build.mjs tudominio.com
+  o pídeme que lo haga indicándome el dominio.
+
+PRIVACIDAD
+  El progreso de cada visitante se guarda solo en su navegador (localStorage), sin cuentas ni datos compartidos.
+  Nota: el enlace de Claude (Artifact) NO admite dominio propio; para usar tu dominio hay que alojar esta carpeta como indico arriba.

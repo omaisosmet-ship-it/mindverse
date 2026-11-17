@@ -1,0 +1,23 @@
+{
+  "name": "MINDVERSE",
+  "short_name": "MINDVERSE",
+  "description": "MINDVERSE: el universo del conocimiento. Explora 8 dimensiones, supera desafíos, gana XP y desbloquea personajes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151629",
+  "theme_color": "#151629",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
